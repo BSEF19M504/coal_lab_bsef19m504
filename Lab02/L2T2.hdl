@@ -1,0 +1,10 @@
+CHIP L2T2
+{
+	IN a,b,c,d,e,f,g,h, sel[3];
+	OUT out;
+	
+	PARTS:
+	Mux4way(a=a, b=b, c=c, d=d, sel[0]=sel[0], sel[1]=sel[1], out=w1);
+	Mux4way(a=e, b=f, c=g, d=h, sel[0]=sel[0], sel[1]=sel[1], out=w2);
+	Mux(a=w1, b=w2, sel=sel[2], out=out);
+}
