@@ -1,0 +1,12 @@
+CHIP L3T1
+{
+	IN a,b,cin, sel[2];
+	OUT out,cout;
+	
+	PARTS:
+	And(a=a, b=b, out=aAndb);
+	Or(a=a, b=b, out=aOrb);
+	Xor(a=a, b=b, out=aXorb);
+	FullAdder(a=a, b=b, c=cin, sum=sum, carry=cout);
+	Mux4way(a=aAndb, b=aOrb, c=aXorb, d=sum, sel=sel, out=out);
+}
