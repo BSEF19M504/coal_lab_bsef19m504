@@ -1,0 +1,22 @@
+CHIP L5T1 {
+	IN in[4],inc,load,reset;
+	OUT out[4];
+
+	PARTS:
+
+	Inc4(in=regContent, out=incremented);
+    Mux4(a=regContent, b=incremented, sel=inc, out=value1);
+
+    Mux4(a=value1, b=in, sel=load, out=value2);
+
+    Mux4(a=value2, b=false, sel=reset, out=value3);
+
+    Register4bit(in=value3, load=true, out=regContent, out=tempout);
+
+    Xor(a=tempout[0],b=tempout[1],out=out[1]);
+    Xor(a=tempout[1],b=tempout[2],out=out[2]);
+    Xor(a=tempout[2],b=tempout[3],out=out[3]);
+
+    And(in=tempout[0],b=tempout[0],out=out[0]);
+    
+}
