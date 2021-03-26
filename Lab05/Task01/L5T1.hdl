@@ -11,6 +11,8 @@ CHIP L5T1 {
 
     Mux4(a=value2, b=false, sel=reset, out=value3);
 
-    Register4bit(in=value3, load=true, out=regContent, out=tempout);
+    Register4bit(in=value3, load=true, out=regContent);
+
+    Gray(in=regContent,out=out);
     
 }

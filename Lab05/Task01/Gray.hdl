@@ -1,0 +1,13 @@
+CHIP Gray {
+	IN in[4];
+	OUT out[4];
+
+	PARTS:
+	
+	Xor(a=in[0],b=in[1],out=out[1]);
+    	Xor(a=in[1],b=in[2],out=out[2]);
+    	Xor(a=in[2],b=in[3],out=out[3]);
+
+    	And(a=in[0],b=in[0],out=out[0]);
+    
+}
