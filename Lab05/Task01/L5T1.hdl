@@ -13,10 +13,5 @@ CHIP L5T1 {
 
     Register4bit(in=value3, load=true, out=regContent, out=tempout);
 
-    Xor(a=tempout[0],b=tempout[1],out=out[1]);
-    Xor(a=tempout[1],b=tempout[2],out=out[2]);
-    Xor(a=tempout[2],b=tempout[3],out=out[3]);
-
-    And(in=tempout[0],b=tempout[0],out=out[0]);
     
 }
