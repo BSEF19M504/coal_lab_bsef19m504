@@ -1,0 +1,36 @@
+1. We can pass command line arguments to a program in the two following ways
+	(gdb) set args arg1 arg2...
+	(gdb) run [arg1 arg2 ...]
+
+2. We can set break point for certain condition using the following command syntax
+	break <line#> if <condition>
+
+3. We can run the program line by line after a break by simply typing one of the following commands
+	(gdb) next
+	(gdb) n
+	(gdb) ni
+
+4. We can run the function line by line by simply typing one of the following commands
+	(gdb) step
+	(gdb) s
+	(gdb) si
+
+5. We can continue running the program after a breakpoint by simply typing one of the following commands
+	(gdb) continue
+	(gdb) c
+	(gdb) ci
+
+6. We can continue running the program till the end of a function by simply typing the following command
+	(gdb) finish
+
+7. We can see the value of variable just once by executing the following command
+	(gdb) print <variable-name>
+
+8. We can use the following command syntax to track the value of variable after every break
+	(gdb) display <variable-name>
+
+9. We can print the names and values of all the variables in a function using the following command
+	info locals
+
+10. We can print the names of the functions used in the program using the following command
+	info functions

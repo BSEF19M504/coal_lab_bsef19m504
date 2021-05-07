@@ -1,0 +1,29 @@
+1. mov rax, rax
+	Stores the contents from register rax to register rax. 
+	
+2. mov ecx, msg	; msg is an initialized variable
+	Stores the contents of variable msg to the ecx register
+	
+3. var db “A”, “B”, “C”
+	Creates an array named var containing 3 string values
+	
+4. len equ $$ - $
+	Calculates the size of the current section by subtracting the staring address of line $ from starting address of section $$ which results in the length of the code and stores it in variable named len
+	
+5. buff times 256 db 0x41
+	Produces 256 copies of the value 0x41 and stores the initial address in buff
+	
+6. pi do 3.14159
+	Stores the floating point value in variable pi
+
+7. mov rdi, EXIT_STATUS;	EXIT_STATUS  is a constant
+	Stores the content of the assembly constant named EXIT_STATUS in the rdi register
+
+8. arr resw 50
+	Reserves 50 consective location of word size and stores the address of the 1st location of variable
+
+9. var1 db 0xaa,0xbb,0xcc
+	Stores array of hex coded data in variable var1
+
+10. mL equ $ - msg
+	Calculates the size of msg by subtracting last address of variable message from the starting address of line and stores it in variable mL
