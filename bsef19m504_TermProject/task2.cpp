@@ -289,12 +289,12 @@ int main()
 	while(getline(ifile,line))
 	{
 		string sym;
+		line = stripSpace(line);
 		if(line.find("//") != -1)
 		{
 			stringstream s(line);
 			getline(s,line,'/');
 		}
-		line = stripSpace(line);
 		if(line.empty())
 		{
 			continue;
@@ -315,12 +315,12 @@ int main()
 		for(int i=0; i<16;i++)
 			ins[i] = 0;
 		l++;
+		line = stripSpace(line);
 		if(line.find("//") != -1)
 		{
 			stringstream s(line);
 			getline(s,line,'/');
 		}
-		line = stripSpace(line);
 		if(line.empty())
 		{
 			continue;

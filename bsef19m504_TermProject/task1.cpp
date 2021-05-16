@@ -44,7 +44,7 @@ string stripSpace(string s)
 		if(!(s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
 		{
 			t<<s[i];
-		}	
+		}
 	}
 	t >> n;
 	return n;
@@ -176,12 +176,12 @@ int main()
 		for(int i=0; i<16;i++)
 			ins[i] = 0;
 		l++;
+		line = stripSpace(line);
 		if(line.find("//") != -1)
 		{
 			stringstream s(line);
 			getline(s,line,'/');
 		}
-		line = stripSpace(line);
 		if(line.empty())
 		{
 			continue;
