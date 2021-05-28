@@ -8,11 +8,12 @@ SECTION .bss
 SECTION .text
 	global _start
 _start:
-	mov [res],num1
-	add [res],num2
-	add [res],num2
-	sub [res],num2
-	push [res]
+	mov rcx,num1
+	add rcx,num2
+	add rcx,num2
+	sub rcx,num2
+	mov [res],rcx
+	push byte res
 	mov rax,60
 	mov rdi,0
 	syscall
