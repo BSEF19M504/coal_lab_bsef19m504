@@ -1,18 +1,17 @@
 section .bss
-	in resb 24
-	in_len equ $ - in
+	input resb 24
 
 section .data
 	msg db "Welcome "
-	msg_len equ $ - text
+	msg_len equ $ - msg
 
 section .text
 	global _start
 _start:
 	mov rax, 0
 	mov rdi, 1
-	mov rsi, in
-	mov rdx, in_len
+	mov rsi, input
+	mov rdx, 24
 	syscall
 
 	mov rax, 1
@@ -23,8 +22,8 @@ _start:
 
 	mov rax, 1
 	mov rdi, 1
-	mov rsi, in
-	mov rdx, in_len
+	mov rsi, input
+	mov rdx, 24
 	syscall
 
 	mov rax, 60
