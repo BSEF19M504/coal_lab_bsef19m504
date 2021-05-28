@@ -11,13 +11,13 @@
 	Adds the value of register al and the address of register eax
 
 5. mov DWORD PTR [rbp-4],0x0
-	
+	Stores 0x0 in address rbp-4
 
 6. lea rax,[rbp-4]
 	Stores address of location 4 away from adrees stored in rbp 
 
 7. inc DWORD PTR [rax]
-	
+	Increments data at address stored in rax
 
 8. var db "A","B","C"
 	Creates an array named var containing 3 string values
