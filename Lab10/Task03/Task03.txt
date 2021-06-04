@@ -1,0 +1,6 @@
+1. Break the execution at _start label
+2. Run the program
+3. Disassemble the program
+4. Note the address of the instruction after 1st jump
+5. Set program counter to that address
+6. Continue execution
